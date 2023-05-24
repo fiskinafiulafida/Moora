@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AlternatifController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +27,11 @@ Route::post('/login', [LoginController::class, 'cekStatusLogin'])->middleware('g
 Route::get('/logout', [LoginController::class, 'logout'])->middleware('auth');
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
 
+// Register
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');
+
 // Alternatif
-Route::resource('/alternatif', AlternatifController::class);
+Route::resource('/alternatif', AlternatifController::class)->middleware('auth');
+
+// Ktriteria
