@@ -1,6 +1,6 @@
 @extends('Layouts/Admin')
 
-@section('title', 'Dashboard Admin')
+@section('title', 'Edit Kriteria')
 
 @section('sidebar')
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -105,47 +105,69 @@
 </nav>
 @endsection
 
-@section('page_heading')
-<h1 class="h3 mb-2 text-gray-800">Welcome to the website Selection of the best students at the state polytechnic of malang</h1>
-@endsection
-
 @section('header')
-<h6 class="m-0 font-weight-bold text-primary">Dashboard Admin Moora</h6>
+<h6 class="m-0 font-weight-bold text-primary">Edit Data Kriteria</h6>
 @endsection
+
 @section('body')
-<div class="row">
-
-    <div class="col-lg-6">
-
-        <!-- Circle Buttons -->
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Circle Buttons</h6>
+<div>
+    <form action="/kriteria/{{ $kriteria->id }}/edit" method="POST">
+        @csrf
+        <div class="card-body">
+            <!-- ketika error -->
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
             </div>
-            <div class="card-body">
-                <p>Use Font Awesome Icons (included with this theme package) along with the circle
-                    buttons as shown in the examples below!</p>
+            @endif
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nama Kriteria</label>
+                <input type="nama_kriteria" class="form-control" name="nama_kriteria" id="nama_kriteria" value="{{ $kriteria->nama_kriteria }}">
+            </div>
+            <!-- error message untuk Kode -->
+            @error('nama_kriteria')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+            @enderror
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Bobot</label>
+                <input type="bobot" class="form-control" name="bobot" id="bobot" value="{{ $kriteria->bobot }}">
+            </div>
+            <!-- error message untuk bobot -->
+            @error('bobot')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+            @enderror
+            <label class="col-sm-2 col-form-label" for="jenis_kriteria">Jenis Kriteria</label>
+            <div class="row mb-3">
+                <div class="col-sm">
+                    <select id="jenis_kriteria" class="form-control" id="jenis_kriteria" name="jenis_kriteria" aria-label="Default select example">
+                        <option value="Benefit" @selected(old('jenis_kriteria', $kriteria->(jenis_kriteria) == 'Benefit')>Benefit</option>
+                        <option value="Cost" @selected(old('jenis_kriteria', $kriteria->(jenis_kriteria) == 'Cost')>Cost</option>
+                    </select>
+                    @error('jenis_kriteria')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <button type="submit" class="btn btn-primary">Update</button>
             </div>
         </div>
-    </div>
-
-    <div class="col-lg-6">
-
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Split Buttons with Icon</h6>
-            </div>
-            <div class="card-body">
-                <p>Works with any button colors, just use the <code>.btn-icon-split</code> class and
-                    the markup in the examples below. The examples below also use the
-                    <code>.text-white-50</code> helper class on the icons for additional styling,
-                    but it is not required.
-                </p>
-            </div>
-        </div>
-    </div>
+    </form>
 </div>
 @endsection
+
 
 @section('footer')
 <div class="container my-auto">

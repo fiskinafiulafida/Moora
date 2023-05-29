@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AlternatifController;
+use App\Http\Controllers\KriteriaController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SubKriteriaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +36,12 @@ Route::post('/register', [RegisterController::class, 'store'])->middleware('gues
 // Alternatif
 Route::resource('/alternatif', AlternatifController::class)->middleware('auth');
 
-// Ktriteria
+// Sub Ktriteria
+Route::resource('/subkriteria', SubKriteriaController::class)->middleware('auth');
+
+Route::resource('/kriteria', KriteriaController::class);
+
+// ubah
+
+Route::get('/kriteria/ubah/{id}', [KriteriaController::class, 'ubahKriteria'])->name('ubah_kriteria')->middleware('auth');
+Route::post('/kriteria/{id}/edit', [KriteriaController::class, 'ubah']);

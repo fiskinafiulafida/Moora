@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Kriteria extends Model
 {
     use HasFactory;
+
+    protected $table = 'kriterias';
+    protected $primaryKey = 'id';
+
+    protected $fillable = [
+        'nama_kriteria', 'bobot', 'jenis_kriteria'
+    ];
 }

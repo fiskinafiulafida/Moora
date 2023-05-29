@@ -1,6 +1,6 @@
 @extends('Layouts/Admin')
 
-@section('title', 'Dashboard Admin')
+@section('title', 'Dashboard Alternatif')
 
 @section('sidebar')
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -106,45 +106,75 @@
 @endsection
 
 @section('page_heading')
-<h1 class="h3 mb-2 text-gray-800">Welcome to the website Selection of the best students at the state polytechnic of malang</h1>
+<h1 class="h3 mb-2 text-gray-800">Data Alternatif</h1>
 @endsection
 
 @section('header')
-<h6 class="m-0 font-weight-bold text-primary">Dashboard Admin Moora</h6>
+<h6 class="m-0 font-weight-bold text-primary">Dashboard Data Alternatif</h6>
 @endsection
+
 @section('body')
-<div class="row">
+@foreach ($subkriteria as $subkriteria)
+<div>
+    <h6 class="m-0 font-weight-bold text-primary">{{$subkriteria->nama_kriteria}}</h6>
+    <a href="{{ route('subkriteria.create') }}" class="btn btn-info btn-icon-split">
+        <span class="icon text-white-50">
+            <i class="fas fa-info-circle"></i>
+        </span>
+        <span class="text">Create Data</span>
+    </a>
+</div>
 
-    <div class="col-lg-6">
+</br>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
 
-        <!-- Circle Buttons -->
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Circle Buttons</h6>
-            </div>
-            <div class="card-body">
-                <p>Use Font Awesome Icons (included with this theme package) along with the circle
-                    buttons as shown in the examples below!</p>
-            </div>
-        </div>
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Sub Kriteria</h6>
     </div>
 
-    <div class="col-lg-6">
-
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Split Buttons with Icon</h6>
-            </div>
-            <div class="card-body">
-                <p>Works with any button colors, just use the <code>.btn-icon-split</code> class and
-                    the markup in the examples below. The examples below also use the
-                    <code>.text-white-50</code> helper class on the icons for additional styling,
-                    but it is not required.
-                </p>
-            </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Sub Kriteria</th>
+                        <th>Nilai</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Sub Kriteria</th>
+                        <th>Nilai</th>
+                        <th>Aksi</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @forelse ($subkriteria as $subkriteria)
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $subkriteria->nama_sub }}</td>
+                        <td>{{ $subkriteria->nilai }}</td>
+                        <td class="text-center">
+                            <form action="{{ route('subkriteria.destroy',$subkriteria->id) }}" method="POST">
+                                <a class="btn btn-warning btn-circle" href="/kriteria/ubah/{{$kr->id"><i class="fas fa-exclamation-triangle"></i></a>
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-circle" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></button>
+                            </form>
+                        </td>
+                        @empty
+                    </tr>
+                    @endforelse
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
+@endforeach
 @endsection
 
 @section('footer')

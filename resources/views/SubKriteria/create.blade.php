@@ -1,6 +1,6 @@
 @extends('Layouts/Admin')
 
-@section('title', 'Dashboard Admin')
+@section('title', 'Create Sub-Kriteria')
 
 @section('sidebar')
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -105,45 +105,51 @@
 </nav>
 @endsection
 
-@section('page_heading')
-<h1 class="h3 mb-2 text-gray-800">Welcome to the website Selection of the best students at the state polytechnic of malang</h1>
-@endsection
-
 @section('header')
-<h6 class="m-0 font-weight-bold text-primary">Dashboard Admin Moora</h6>
+<h6 class="m-0 font-weight-bold text-primary">Create Data Alternatif</h6>
 @endsection
+
 @section('body')
-<div class="row">
-
-    <div class="col-lg-6">
-
-        <!-- Circle Buttons -->
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Circle Buttons</h6>
+<div>
+    <form action="{{ route('alternatif.store') }}" method="POST">
+        @csrf
+        <div class="card-body">
+            @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
             </div>
-            <div class="card-body">
-                <p>Use Font Awesome Icons (included with this theme package) along with the circle
-                    buttons as shown in the examples below!</p>
+            @endif
+
+            @if (session('error'))
+            <div class="alert alert-error">
+                {{ session('error') }}
+            </div>
+            @endif
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Kode</label>
+                <input type="kode" class="form-control" name="kode" id="kode" placeholder="A1">
+            </div>
+            <!-- error message untuk Kode -->
+            @error('kode')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+            @enderror
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nama Alternatif</label>
+                <input type="nama_alternatif" class="form-control" name="nama_alternatif" id="nama_alternatif" placeholder="Melinda Putri">
+            </div>
+            <!-- error message untuk Nama_alternatif -->
+            @error('nama_alternatif')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+            @enderror
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>
-    </div>
-
-    <div class="col-lg-6">
-
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Split Buttons with Icon</h6>
-            </div>
-            <div class="card-body">
-                <p>Works with any button colors, just use the <code>.btn-icon-split</code> class and
-                    the markup in the examples below. The examples below also use the
-                    <code>.text-white-50</code> helper class on the icons for additional styling,
-                    but it is not required.
-                </p>
-            </div>
-        </div>
-    </div>
+    </form>
 </div>
 @endsection
 
