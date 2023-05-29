@@ -111,40 +111,32 @@
 
 @section('body')
 <div>
-    <form action="{{ route('alternatif.store') }}" method="POST">
+    <form action="/subkriteria" method="POST">
         @csrf
+        <input type="hidden" class="form-control" id="kriteria_id" name="kriteria_id" required value="{{ $kriteria->id }}" />
         <div class="card-body">
-            @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
+            <label class="col-sm-2 col-form-label" for="nama_sub">Nama Sub Kriteria</label>
+            <div class="col-sm">
+                <input type="text" class="form-control @error('nama_sub')
+                          is-invalid
+                      @enderror" id="nama_sub" name="nama_sub" placeholder="" required value="{{ old('nama_sub') }}" />
+                @error('nama_sub')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
-            @endif
-
-            @if (session('error'))
-            <div class="alert alert-error">
-                {{ session('error') }}
+            <label class="col-sm-2 col-form-label" for="nilai">Nilai</label>
+            <div class="col-sm">
+                <input type="number" class="form-control @error('nilai')
+                          is-invalid
+                      @enderror" id="nilai" name="nilai" placeholder="" required value="{{ old('nilai') }}" />
+                @error('nilai')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
-            @endif
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Kode</label>
-                <input type="kode" class="form-control" name="kode" id="kode" placeholder="A1">
-            </div>
-            <!-- error message untuk Kode -->
-            @error('kode')
-            <div class="invalid-feedback">
-                {{ $message }}
-            </div>
-            @enderror
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Nama Alternatif</label>
-                <input type="nama_alternatif" class="form-control" name="nama_alternatif" id="nama_alternatif" placeholder="Melinda Putri">
-            </div>
-            <!-- error message untuk Nama_alternatif -->
-            @error('nama_alternatif')
-            <div class="invalid-feedback">
-                {{ $message }}
-            </div>
-            @enderror
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>

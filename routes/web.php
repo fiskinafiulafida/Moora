@@ -37,11 +37,14 @@ Route::post('/register', [RegisterController::class, 'store'])->middleware('gues
 Route::resource('/alternatif', AlternatifController::class)->middleware('auth');
 
 // Sub Ktriteria
-Route::resource('/subkriteria', SubKriteriaController::class)->middleware('auth');
+Route::get('/subkriteria', [SubKriteriaController::class, 'lihatSub'])->name('sub')->middleware('auth');
+Route::get('/subkriteria/tambah/{id}', [SubKriteriaController::class, 'tambahSub'])->name('tambah_sub')->middleware('auth');
+Route::post('/subkriteria', [SubKriteriaController::class, 'tambah']);
+Route::get('/subkriteria/ubah/{id}', [SubKriteriaController::class, 'ubahSub'])->name('ubah_sub')->middleware('auth');
+Route::post('/subkriteria/{id}/edit', [SubKriteriaController::class, 'ubah']);
+Route::post('/subkriteria/{id}/delete', [SubKriteriaController::class, 'hapus']);
 
 Route::resource('/kriteria', KriteriaController::class);
-
 // ubah
-
 Route::get('/kriteria/ubah/{id}', [KriteriaController::class, 'ubahKriteria'])->name('ubah_kriteria')->middleware('auth');
 Route::post('/kriteria/{id}/edit', [KriteriaController::class, 'ubah']);

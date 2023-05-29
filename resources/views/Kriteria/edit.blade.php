@@ -150,8 +150,8 @@
             <div class="row mb-3">
                 <div class="col-sm">
                     <select id="jenis_kriteria" class="form-control" id="jenis_kriteria" name="jenis_kriteria" aria-label="Default select example">
-                        <option value="Benefit" @selected(old('jenis_kriteria', $kriteria->(jenis_kriteria) == 'Benefit')>Benefit</option>
-                        <option value="Cost" @selected(old('jenis_kriteria', $kriteria->(jenis_kriteria) == 'Cost')>Cost</option>
+                        <option value="{{ $kriteria->benefit }}" @selected(old('jenis_kriteria')=='Benefit' )>Benefit</option>
+                        <option value="{{ $kriteria->cost }}" @selected(old('jenis_kriteria')=='Cost' )>Cost</option>
                     </select>
                     @error('jenis_kriteria')
                     <div class="invalid-feedback">

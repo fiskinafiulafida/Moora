@@ -2,58 +2,70 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kriteria;
 use App\Models\SubKriteria;
 use Illuminate\Http\Request;
 
 class SubKriteriaController extends Controller
 {
-    public function index()
+    public function lihatSub()
     {
-        $subkriteria = SubKriteria::latest()->get();
-        return view('SubKriteria.main', compact('subkriteria'));
+        return view('SubKriteria.main', [
+            'title' => 'Lihat Subkriteria',
+            'subkriteria' => SubKriteria::all(),
+            'kriteria' => Kriteria::all()
+        ]);
     }
 
-    public function create()
+    public function tambahSub($id)
     {
-        return view('SubKriteria.create');
+        $kriteria = Kriteria::find($id);
+        return view('SubKriteria.create', [
+            'title' => 'Tambah Sub',
+            'kriteria' => $kriteria
+        ]);
     }
 
-    public function store(Request $request)
+    public function tambah(Request $request)
     {
-        $request->validate([
+        $validatedData = $request->validate([
             'kriteria_id' => 'required|alpha_num|max:255',
             'nama_sub' => 'required|max:255',
             'nilai' => 'required|alpha_num|max:255',
         ]);
-        SubKriteria::create($request->all());
 
-        return redirect()->route('subkriteria.index')->with('succes', 'Data Berhasil di Input');
+        SubKriteria::create($validatedData);
+
+        return redirect('/subkriteria')->with('success', 'Tambah Data Sub Berhasil');
     }
 
-    // edit data
-    public function edit(SubKriteria $subkriteria)
+    public function ubahSub($id)
     {
-        return view('subkriteria.edit', compact('subkriteria'));
+        $sub = SubKriteria::find($id);
+        return view('SubKriteria.edit', [
+            'title' => 'Ubah Sub',
+            'sub' => $sub,
+        ]);
     }
 
-
-    public function update(Request $request, SubKriteria $alternatif)
+    public function ubah(Request $request, $id)
     {
-        $request->validate([
+        $rules = [
             'nama_sub' => 'required|max:255',
             'nilai' => 'required|alpha_num|max:255',
-        ]);
+        ];
 
-        $alternatif->update($request->all());
+        $validatedData = $request->validate($rules);
 
-        return redirect()->route('alternatif.index')->with('succes', 'Data Berhasil di Update');
+        SubKriteria::find($id)->update($validatedData);
+
+        return redirect('/subkriteria')->with('success', 'Ubah Data Sub Berhasil');
     }
 
-    // delete data
-    public function destroy(SubKriteria $alternatif)
+    public function hapus($id)
     {
-        $alternatif->delete();
-
-        return redirect()->route('alternatif.index')->with('succes', 'Data Berhasil di Hapus');
+        $Sub = SubKriteria::find($id);
+        SubKriteria::destroy($Sub->id);
+        return redirect('/subkriteria')->with('success', 'Data Sub telah dihapus');
     }
 }

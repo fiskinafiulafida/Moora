@@ -1,6 +1,6 @@
 @extends('Layouts/Admin')
 
-@section('title', 'Dashboard Alternatif')
+@section('title', 'Dashboard Sub Kriteria')
 
 @section('sidebar')
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -106,18 +106,17 @@
 @endsection
 
 @section('page_heading')
-<h1 class="h3 mb-2 text-gray-800">Data Alternatif</h1>
+<h1 class="h3 mb-2 text-gray-800">Data Sub Kriteria</h1>
 @endsection
 
 @section('header')
-<h6 class="m-0 font-weight-bold text-primary">Dashboard Data Alternatif</h6>
+<h6 class="m-0 font-weight-bold text-primary">Dashboard Data Sub Kriteria</h6>
 @endsection
 
 @section('body')
-@foreach ($subkriteria as $subkriteria)
+@foreach ($kriteria as $kr)
 <div>
-    <h6 class="m-0 font-weight-bold text-primary">{{$subkriteria->nama_kriteria}}</h6>
-    <a href="{{ route('subkriteria.create') }}" class="btn btn-info btn-icon-split">
+    <a href="/subkriteria/tambah/{{$kr->id}}" class="btn btn-info btn-icon-split">
         <span class="icon text-white-50">
             <i class="fas fa-info-circle"></i>
         </span>
@@ -130,7 +129,7 @@
 <div class="card shadow mb-4">
 
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">DataTables Sub Kriteria</h6>
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Kriteria</h6>
     </div>
 
     <div class="card-body">
@@ -138,37 +137,30 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>No</th>
-                        <th>Nama Sub Kriteria</th>
+                        <th>Nama Kriteria</th>
                         <th>Nilai</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
-                        <th>No</th>
-                        <th>Nama Sub Kriteria</th>
+                        <th>Nama Kriteria</th>
                         <th>Nilai</th>
                         <th>Aksi</th>
                     </tr>
                 </tfoot>
                 <tbody>
-                    @forelse ($subkriteria as $subkriteria)
+                    @foreach ($subkriteria as $sub)
+                    @if ($sub->kriteria_id == $kr->id)
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
-                        <td>{{ $subkriteria->nama_sub }}</td>
-                        <td>{{ $subkriteria->nilai }}</td>
-                        <td class="text-center">
-                            <form action="{{ route('subkriteria.destroy',$subkriteria->id) }}" method="POST">
-                                <a class="btn btn-warning btn-circle" href="/kriteria/ubah/{{$kr->id"><i class="fas fa-exclamation-triangle"></i></a>
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-circle" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></button>
-                            </form>
+                        <td>{{ $sub->nama_sub}}</td>
+                        <td>{{ $sub->nilai}}</td>
+                        <td>
+                            <a class="btn btn-warning btn-circle" href="/subkriteria/ubah/{{$sub->id}}"><i class="fas fa-exclamation-triangle"></i></a>
                         </td>
-                        @empty
                     </tr>
-                    @endforelse
+                    @endif
+                    @endforeach
                 </tbody>
             </table>
         </div>
