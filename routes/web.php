@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AlternatifController;
 use App\Http\Controllers\KriteriaController;
+use App\Http\Controllers\PenilaianController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SubKriteriaController;
 
@@ -48,3 +49,11 @@ Route::resource('/kriteria', KriteriaController::class);
 // ubah
 Route::get('/kriteria/ubah/{id}', [KriteriaController::class, 'ubahKriteria'])->name('ubah_kriteria')->middleware('auth');
 Route::post('/kriteria/{id}/edit', [KriteriaController::class, 'ubah']);
+
+// Penilaian
+Route::get('/penilaian', [PenilaianController::class, 'lihatPenilaian'])->name('penilaian')->middleware('auth');
+Route::get('/penilaian/tambah/{id}', [PenilaianController::class, 'tambahPenilaian'])->name('tambah_penilaian')->middleware('auth');
+Route::post('/penilaian', [PenilaianController::class, 'tambah']);
+Route::get('/penilaian/{id}', [PenilaianController::class, 'jalur'])->name('ubah_penilaian')->middleware('auth');
+Route::post('/penilaian/{id}/edit', [PenilaianController::class, 'ubah']);
+Route::post('/penilaian/{id}/delete', [PenilaianController::class, 'hapus']);
