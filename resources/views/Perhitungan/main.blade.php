@@ -146,7 +146,7 @@
                     {{-- @foreach ($alternatif as $al)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                    <td>{{$al->nama_mahasiswa}}</td>
+                    <td>{{$al->nama_alternatif}}</td>
                     @foreach ($penilaian as $item)
                     @if ($item->alternatif_id == $al->id)
                     <td>{{$item->sub_kriteria->nilai}}</td>
@@ -159,7 +159,7 @@
                     @foreach ($penilaian as $pen)
                     <tr>
                         <td>{{$loop->iteration}}</td>
-                        <td>{{$pen->alternatif->nama_mahasiswa}}</td>
+                        <td>{{$pen->alternatif->nama_alternatif}}</td>
                         <td>{{$pen->sub_kriteria1->nilai}}</td>
                         <td>{{$pen->sub_kriteria2->nilai}}</td>
                         <td>{{$pen->sub_kriteria3->nilai}}</td>
@@ -205,7 +205,7 @@
                     @foreach ($penilaian as $pen)
                     <tr>
                         <td>{{$loop->iteration}}</td>
-                        <td>{{$pen->alternatif->nama_mahasiswa}}</td>
+                        <td>{{$pen->alternatif->nama_alternatif}}</td>
                         <td>{{round($pen->sub_kriteria1->nilai/$normalisasi[0],4)}}</td>
                         <td>{{round($pen->sub_kriteria2->nilai/$normalisasi[1],4)}}</td>
                         <td>{{round($pen->sub_kriteria3->nilai/$normalisasi[2],4)}}</td>
@@ -238,7 +238,7 @@
                 <tbody>
                     @foreach ($penilaian as $pen)
                     <tr>
-                        <th>{{$pen->alternatif->nama_mahasiswa}}</th>
+                        <th>{{$pen->alternatif->nama_alternatif}}</th>
                         <td>{{round($pen->sub_kriteria1->nilai/$normalisasi[0] * ($pen->sub_kriteria1->kriteria->bobot/100), 4)}}</td>
                         <td>{{round($pen->sub_kriteria2->nilai/$normalisasi[1] * ($pen->sub_kriteria2->kriteria->bobot/100), 4)}}</td>
                         <td>{{round($pen->sub_kriteria3->nilai/$normalisasi[2] * ($pen->sub_kriteria3->kriteria->bobot/100), 4)}}</td>
@@ -279,7 +279,7 @@
                 <tbody>
                     @foreach ($penilaian as $pen)
                     <tr>
-                        <td>{{$pen->alternatif->nama_mahasiswa}}</td>
+                        <td>{{$pen->alternatif->nama_alternatif}}</td>
                         <td>
                             @php
                             $ben = 0;
