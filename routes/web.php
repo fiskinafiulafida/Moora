@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AlternatifController;
 use App\Http\Controllers\KriteriaController;
 use App\Http\Controllers\PenilaianController;
+use App\Http\Controllers\PerhitunganController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SubKriteriaController;
 
@@ -57,3 +58,6 @@ Route::post('/penilaian', [PenilaianController::class, 'tambah']);
 Route::get('/penilaian/{id}', [PenilaianController::class, 'jalur'])->name('ubah_penilaian')->middleware('auth');
 Route::post('/penilaian/{id}/edit', [PenilaianController::class, 'ubah']);
 Route::post('/penilaian/{id}/delete', [PenilaianController::class, 'hapus']);
+
+// Perhitungan
+Route::get('/perhitungan', [PerhitunganController::class, 'lihatLaporan'])->name('Perhitungan')->middleware('auth');
