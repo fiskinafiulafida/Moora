@@ -106,7 +106,7 @@
 @endsection
 
 @section('page_heading')
-<h1 class="h3 mb-2 text-gray-800">Welcome to the website Selection of the best students at the state polytechnic of malang</h1>
+<h1 class="h3 mb-2 text-gray-800">Welcome to the Website Si Moora</h1>
 @endsection
 
 @section('header')
@@ -120,11 +120,12 @@
         <!-- Circle Buttons -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Circle Buttons</h6>
+                <h6 class="m-0 font-weight-bold text-primary">MOORA</h6>
             </div>
             <div class="card-body">
-                <p>Use Font Awesome Icons (included with this theme package) along with the circle
-                    buttons as shown in the examples below!</p>
+                <p>Multi-Objective Optimization by Ratio Analysis (MOORA) adalah salah satu metode yang dapat digunakan untuk membantu
+                    proses pengambilan keputusan dalam SPK. Metode MOORA dikembangkan pertama kali oleh Brauers yang menerapkannya dalam 
+                    proses pengambilan keputusan dengan multikriteria.</p>
             </div>
         </div>
     </div>
@@ -133,13 +134,16 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Split Buttons with Icon</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Kelebihan Moora</h6>
             </div>
             <div class="card-body">
-                <p>Works with any button colors, just use the <code>.btn-icon-split</code> class and
-                    the markup in the examples below. The examples below also use the
-                    <code>.text-white-50</code> helper class on the icons for additional styling,
-                    but it is not required.
+                <p>Kelebihan Moora
+                    <p>1. Metode MOORA ini mempunyai konsep yang sederhana dan mudah
+dipahami.<p>
+    <p>2. Metode MOORA ini mempunyai komputasi yang efisien.<p>
+        <p>3. Metode MOORA ini memiliki kemampuan untuk mengukur kinerja relatif
+dari alternatif-alternatif keputusan dalam bentuk matematis yang
+sederhana.<p>
                 </p>
             </div>
         </div>

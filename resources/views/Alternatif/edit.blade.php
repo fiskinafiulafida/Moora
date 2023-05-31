@@ -37,13 +37,15 @@
                 <h6 class="collapse-header">Components</h6>
                 <a class="collapse-item" href="/alternatif">Alternatif</a>
                 <a class="collapse-item" href="/kriteria">Kriteria</a>
+                <a class="collapse-item" href="/subkriteria">Sub Kriteria</a>
+                <a class="collapse-item" href="/penilaian">Penilaian</a>
             </div>
         </div>
     </li>
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="/perhitungan">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Perhitungan</span></a>
     </li>
