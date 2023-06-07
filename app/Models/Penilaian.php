@@ -36,4 +36,24 @@ class Penilaian extends Model
     {
         return $this->belongsTo(SubKriteria::class);
     }
+    public function sub_kriteria6()
+    {
+        return $this->belongsTo(SubKriteria::class);
+    }
+    public function sub_kriteria7()
+    {
+        return $this->belongsTo(SubKriteria::class);
+    }
+    public function sub_kriteria8()
+    {
+        return $this->belongsTo(SubKriteria::class);
+    }
+    public function sub_kriteria9()
+    {
+        return $this->belongsTo(SubKriteria::class);
+    }
+    public function sub_kriteria10()
+    {
+        return $this->belongsTo(SubKriteria::class);
+    }
 }

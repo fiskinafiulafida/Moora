@@ -175,6 +175,69 @@
                                     @endif
                                     @endforeach
                                 </tr>
+                                <tr>
+                                    <td>{{$kriteria[3]->nama_kriteria}}</td>
+                                    <td>:</td>
+                                    @foreach ($penilaian as $pen)
+                                    @if ($pen->alternatif_id == $al->id)
+                                    <td>{{$pen->sub_kriteria4->nama_sub}}</td>
+                                    @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td>{{$kriteria[4]->nama_kriteria}}</td>
+                                    <td>:</td>
+                                    @foreach ($penilaian as $pen)
+                                    @if ($pen->alternatif_id == $al->id)
+                                    <td>{{$pen->sub_kriteria5->nama_sub}}</td>
+                                    @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td>{{$kriteria[5]->nama_kriteria}}</td>
+                                    <td>:</td>
+                                    @foreach ($penilaian as $pen)
+                                    @if ($pen->alternatif_id == $al->id)
+                                    <td>{{$pen->sub_kriteria6->nama_sub}}</td>
+                                    @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td>{{$kriteria[6]->nama_kriteria}}</td>
+                                    <td>:</td>
+                                    @foreach ($penilaian as $pen)
+                                    @if ($pen->alternatif_id == $al->id)
+                                    <td>{{$pen->sub_kriteria7->nama_sub}}</td>
+                                    @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td>{{$kriteria[7]->nama_kriteria}}</td>
+                                    <td>:</td>
+                                    @foreach ($penilaian as $pen)
+                                    @if ($pen->alternatif_id == $al->id)
+                                    <td>{{$pen->sub_kriteria8->nama_sub}}</td>
+                                    @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td>{{$kriteria[8]->nama_kriteria}}</td>
+                                    <td>:</td>
+                                    @foreach ($penilaian as $pen)
+                                    @if ($pen->alternatif_id == $al->id)
+                                    <td>{{$pen->sub_kriteria9->nama_sub}}</td>
+                                    @endif
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td>{{$kriteria[9]->nama_kriteria}}</td>
+                                    <td>:</td>
+                                    @foreach ($penilaian as $pen)
+                                    @if ($pen->alternatif_id == $al->id)
+                                    <td>{{$pen->sub_kriteria10->nama_sub}}</td>
+                                    @endif
+                                    @endforeach
+                                </tr>
                             </table>
                         </td>
                         <td>

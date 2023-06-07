@@ -116,16 +116,16 @@
         @csrf
         <input type="hidden" class="form-control" id="alternatif_id" name="alternatif_id" required value="{{ $alternatif->id }}" />
         @foreach ($kriteria as $kr)
+        <label class="form-label" for="{{ $kr->nama_kriteria }}">{{ $kr->nama_kriteria }}</label>
         <div class="row mb-3">
-            <label class="form-label" for="{{ $kr->nama_kriteria }}">{{ $kr->nama_kriteria }}</label>
             <div class="col-sm-10">
-                <select id="{{ $kr->nama_kriteria }}" class="form-select @error('sub_kriteria{{ $loop->iteration }}_id')
+                <select id="{{ $kr->nama_kriteria }}" class="form-control @error('sub_kriteria{{ $loop->iteration }}_id')
                                 is-invalid
                             @enderror" name="sub_kriteria{{ $loop->iteration }}_id">
                     <option value="" hidden>Select {{ $kr->nama_kriteria }}</option>
                     @foreach ($subkriteria as $sub)
                     @if ($sub->kriteria_id == $kr->id)
-                    <option value="{{$sub->id}}" @selected(old('{{ $kr->id }}', $kr->id) == '{{$sub->id}}')>{{ $sub->nama_sub }}</option>
+                    <option value="{{$sub->id}}" @selected(old('{{ $kr->id }}', $kr->id == '{{$sub->id}}' > {{ $sub->nama_sub }}</option>
                     @endif
                     @endforeach
                 </select>

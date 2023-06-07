@@ -21,6 +21,11 @@ class CreatePenilaiansTable extends Migration
             $table->foreignId('sub_kriteria3_id');
             $table->foreignId('sub_kriteria4_id');
             $table->foreignId('sub_kriteria5_id');
+            $table->foreignId('sub_kriteria6_id');
+            $table->foreignId('sub_kriteria7_id');
+            $table->foreignId('sub_kriteria8_id');
+            $table->foreignId('sub_kriteria9_id');
+            $table->foreignId('sub_kriteria10_id');
             $table->timestamps();
         });
     }
