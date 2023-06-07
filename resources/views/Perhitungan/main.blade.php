@@ -267,7 +267,7 @@
                         <th>Nama Mahasiswa</th>
                         <th>Benefit</th>
                         <th>Cost</th>
-                        <th>Skor</th>
+                        <th>Skor Peringkat</th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -275,7 +275,7 @@
                         <th>Nama Mahasiswa</th>
                         <th>Benefit</th>
                         <th>Cost</th>
-                        <th>Skor</th>
+                        <th>Skor Peringkat</th>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -316,7 +316,7 @@
                             $ben += (($pen->sub_kriteria10->nilai/$normalisasi[9]) * ($pen->sub_kriteria10->kriteria->bobot/100));
                             }
 
-                            echo round($ben, 9);
+                            echo round($ben, 4);
                             @endphp
                         </td>
                         <td>
@@ -353,19 +353,19 @@
                             $cos += (($pen->sub_kriteria10->nilai/$normalisasi[9]) * ($pen->sub_kriteria10->kriteria->bobot/100));
                             }
 
-                            echo round($cos, 9);
+                            echo round($cos, 4);
                             @endphp
                         </td>
                         <td>
                             @php
                             $tot = 0;
                             if ($cos == 0) {
-                            echo round($ben, 9);
+                            echo round($ben, 4);
                             } elseif ($ben == 0) {
-                            echo round($cos, 9);
+                            echo round($cos, 4);
                             } else {
-                            $tot = $ben/$cos;
-                            echo round($tot, 9);
+                            $tot = $ben-$cos;
+                            echo round($tot, 4);
                             }
                             @endphp
                         </td>
