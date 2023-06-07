@@ -146,9 +146,8 @@
                 <select id="jenis_kriteria" class="form-control @error('jenis_kriteria')
                             is-invalid
                         @enderror" id="jenis_kriteria" name="jenis_kriteria" aria-label="Default select example">
-                    <option value="" hidden>Select jenis_kriteria</option>
-                    <option value="Benefit" @selected(old('jenis_kriteria', $kriteria->jenis_kriteria == 'Benefit' >Benefit</option>
-                    <option value="Cost" @selected(old('jenis_kriteria', $kriteria->jenis_kriteria == 'Cost' >Cost</option>
+                    <option value="Benefit" @selected(old('jenis_kriteria', $kriteria->jenis_kriteria == 'Benefit' > Benefit</option>
+                    <option value="Cost" @selected(old('jenis_kriteria', $kriteria->jenis_kriteria == 'Cost' > Cost</option>
                 </select>
                 @error('jenis_kriteria')
                 <div class="invalid-feedback">
