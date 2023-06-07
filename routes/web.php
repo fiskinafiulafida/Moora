@@ -46,7 +46,7 @@ Route::get('/subkriteria/ubah/{id}', [SubKriteriaController::class, 'ubahSub'])-
 Route::post('/subkriteria/{id}/edit', [SubKriteriaController::class, 'ubah']);
 Route::post('/subkriteria/{id}/delete', [SubKriteriaController::class, 'hapus']);
 
-Route::resource('/kriteria', KriteriaController::class);
+Route::resource('/kriteria', KriteriaController::class)->middleware('auth');
 // ubah
 Route::get('/kriteria/ubah/{id}', [KriteriaController::class, 'ubahKriteria'])->name('ubah_kriteria')->middleware('auth');
 Route::post('/kriteria/{id}/edit', [KriteriaController::class, 'ubah']);
