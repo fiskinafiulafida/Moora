@@ -126,7 +126,7 @@
                     <!-- <option value="" hidden>Select {{ $kr->nama_kriteria }}</option> -->
                     @foreach ($subkriteria as $sub)
                     @if ($sub->kriteria_id == $kr->id)
-                    <option value="{{$sub->id}}" @selected(old('{{ $kr->id }}', $kr->id == '{{$sub->id}}' > {{ $sub->nama_sub }}</option>
+                    <option value="{{$sub->id}}" @selected(old('{{ $kr->id }}', '{{$sub->id}}' > {{ $sub->nama_sub }}</option>
                     @endif
                     @endforeach
                 </select>
