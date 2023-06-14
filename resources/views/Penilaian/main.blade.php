@@ -153,7 +153,7 @@
                                     <td>:</td>
                                     @foreach ($penilaian as $pen)
                                     @if ($pen->alternatif_id == $al->id)
-                                    <td>{{$pen->sub_kriteria1->nama_sub}}</td>
+                                    <td>{{$pen->sub_kriteria1->nilai}}</td>
                                     @endif
                                     @endforeach
                                 </tr>
@@ -162,7 +162,7 @@
                                     <td>:</td>
                                     @foreach ($penilaian as $pen)
                                     @if ($pen->alternatif_id == $al->id)
-                                    <td>{{$pen->sub_kriteria2->nama_sub}}</td>
+                                    <td>{{$pen->sub_kriteria2->nilai}}</td>
                                     @endif
                                     @endforeach
                                 </tr>
@@ -171,7 +171,7 @@
                                     <td>:</td>
                                     @foreach ($penilaian as $pen)
                                     @if ($pen->alternatif_id == $al->id)
-                                    <td>{{$pen->sub_kriteria3->nama_sub}}</td>
+                                    <td>{{$pen->sub_kriteria3->nilai}}</td>
                                     @endif
                                     @endforeach
                                 </tr>
@@ -180,7 +180,7 @@
                                     <td>:</td>
                                     @foreach ($penilaian as $pen)
                                     @if ($pen->alternatif_id == $al->id)
-                                    <td>{{$pen->sub_kriteria4->nama_sub}}</td>
+                                    <td>{{$pen->sub_kriteria4->nilai}}</td>
                                     @endif
                                     @endforeach
                                 </tr>
@@ -189,7 +189,7 @@
                                     <td>:</td>
                                     @foreach ($penilaian as $pen)
                                     @if ($pen->alternatif_id == $al->id)
-                                    <td>{{$pen->sub_kriteria5->nama_sub}}</td>
+                                    <td>{{$pen->sub_kriteria5->nilai}}</td>
                                     @endif
                                     @endforeach
                                 </tr>
@@ -198,7 +198,7 @@
                                     <td>:</td>
                                     @foreach ($penilaian as $pen)
                                     @if ($pen->alternatif_id == $al->id)
-                                    <td>{{$pen->sub_kriteria6->nama_sub}}</td>
+                                    <td>{{$pen->sub_kriteria6->nilai}}</td>
                                     @endif
                                     @endforeach
                                 </tr>
@@ -207,7 +207,7 @@
                                     <td>:</td>
                                     @foreach ($penilaian as $pen)
                                     @if ($pen->alternatif_id == $al->id)
-                                    <td>{{$pen->sub_kriteria7->nama_sub}}</td>
+                                    <td>{{$pen->sub_kriteria7->nilai}}</td>
                                     @endif
                                     @endforeach
                                 </tr>
@@ -216,7 +216,7 @@
                                     <td>:</td>
                                     @foreach ($penilaian as $pen)
                                     @if ($pen->alternatif_id == $al->id)
-                                    <td>{{$pen->sub_kriteria8->nama_sub}}</td>
+                                    <td>{{$pen->sub_kriteria8->nilai}}</td>
                                     @endif
                                     @endforeach
                                 </tr>
@@ -225,7 +225,7 @@
                                     <td>:</td>
                                     @foreach ($penilaian as $pen)
                                     @if ($pen->alternatif_id == $al->id)
-                                    <td>{{$pen->sub_kriteria9->nama_sub}}</td>
+                                    <td>{{$pen->sub_kriteria9->nilai}}</td>
                                     @endif
                                     @endforeach
                                 </tr>
@@ -234,7 +234,7 @@
                                     <td>:</td>
                                     @foreach ($penilaian as $pen)
                                     @if ($pen->alternatif_id == $al->id)
-                                    <td>{{$pen->sub_kriteria10->nama_sub}}</td>
+                                    <td>{{$pen->sub_kriteria10->nilai}}</td>
                                     @endif
                                     @endforeach
                                 </tr>
