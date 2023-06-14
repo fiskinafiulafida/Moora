@@ -236,16 +236,16 @@
                     @foreach ($penilaian as $pen)
                     <tr>
                         <th>{{$pen->alternatif->nama_alternatif}}</th>
-                        <td>{{round($pen->sub_kriteria1->nilai/$normalisasi[0] * ($pen->sub_kriteria1->kriteria->bobot/42), 4)}}</td>
-                        <td>{{round($pen->sub_kriteria2->nilai/$normalisasi[1] * ($pen->sub_kriteria2->kriteria->bobot/42), 4)}}</td>
-                        <td>{{round($pen->sub_kriteria3->nilai/$normalisasi[2] * ($pen->sub_kriteria3->kriteria->bobot/42), 4)}}</td>
-                        <td>{{round($pen->sub_kriteria4->nilai/$normalisasi[3] * ($pen->sub_kriteria4->kriteria->bobot/42), 4)}}</td>
-                        <td>{{round($pen->sub_kriteria5->nilai/$normalisasi[4] * ($pen->sub_kriteria5->kriteria->bobot/42), 4)}}</td>
-                        <td>{{round($pen->sub_kriteria6->nilai/$normalisasi[5] * ($pen->sub_kriteria6->kriteria->bobot/42), 4)}}</td>
-                        <td>{{round($pen->sub_kriteria7->nilai/$normalisasi[6] * ($pen->sub_kriteria7->kriteria->bobot/42), 4)}}</td>
-                        <td>{{round($pen->sub_kriteria8->nilai/$normalisasi[7] * ($pen->sub_kriteria8->kriteria->bobot/42), 4)}}</td>
-                        <td>{{round($pen->sub_kriteria9->nilai/$normalisasi[8] * ($pen->sub_kriteria9->kriteria->bobot/42), 4)}}</td>
-                        <td>{{round($pen->sub_kriteria10->nilai/$normalisasi[9] * ($pen->sub_kriteria10->kriteria->bobot/42), 4)}}</td>
+                        <td>{{round($pen->sub_kriteria1->nilai/$normalisasi[0] * ($pen->sub_kriteria1->kriteria->bobot/100), 4)}}</td>
+                        <td>{{round($pen->sub_kriteria2->nilai/$normalisasi[1] * ($pen->sub_kriteria2->kriteria->bobot/100), 4)}}</td>
+                        <td>{{round($pen->sub_kriteria3->nilai/$normalisasi[2] * ($pen->sub_kriteria3->kriteria->bobot/100), 4)}}</td>
+                        <td>{{round($pen->sub_kriteria4->nilai/$normalisasi[3] * ($pen->sub_kriteria4->kriteria->bobot/100), 4)}}</td>
+                        <td>{{round($pen->sub_kriteria5->nilai/$normalisasi[4] * ($pen->sub_kriteria5->kriteria->bobot/100), 4)}}</td>
+                        <td>{{round($pen->sub_kriteria6->nilai/$normalisasi[5] * ($pen->sub_kriteria6->kriteria->bobot/100), 4)}}</td>
+                        <td>{{round($pen->sub_kriteria7->nilai/$normalisasi[6] * ($pen->sub_kriteria7->kriteria->bobot/100), 4)}}</td>
+                        <td>{{round($pen->sub_kriteria8->nilai/$normalisasi[7] * ($pen->sub_kriteria8->kriteria->bobot/100), 4)}}</td>
+                        <td>{{round($pen->sub_kriteria9->nilai/$normalisasi[8] * ($pen->sub_kriteria9->kriteria->bobot/100), 4)}}</td>
+                        <td>{{round($pen->sub_kriteria10->nilai/$normalisasi[9] * ($pen->sub_kriteria10->kriteria->bobot/100), 4)}}</td>
                     </tr>
                     @endforeach
                 </tbody>
