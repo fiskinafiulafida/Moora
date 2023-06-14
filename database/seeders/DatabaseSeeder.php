@@ -26,415 +26,370 @@ class DatabaseSeeder extends Seeder
 
         Alternatif::create([
             'kode' => 'A1',
-            'nama_alternatif' => 'Anggun',
+            'nama_alternatif' => 'Anita',
         ]);
 
         Alternatif::create([
             'kode' => 'A2',
-            'nama_alternatif' => 'Melinda',
+            'nama_alternatif' => 'Dani',
         ]);
 
         Alternatif::create([
             'kode' => 'A3',
-            'nama_alternatif' => 'Aisyah',
+            'nama_alternatif' => 'Hanan',
         ]);
 
         Alternatif::create([
             'kode' => 'A4',
-            'nama_alternatif' => 'Robi',
+            'nama_alternatif' => 'Joko Setiawan',
         ]);
         Alternatif::create([
             'kode' => 'A5',
-            'nama_alternatif' => 'Ilham',
+            'nama_alternatif' => 'Via',
         ]);
         Alternatif::create([
             'kode' => 'A6',
-            'nama_alternatif' => 'Zulfi',
+            'nama_alternatif' => 'Muhammad Ridwan ',
         ]);
 
         Alternatif::create([
             'kode' => 'A7',
-            'nama_alternatif' => 'ALisya',
+            'nama_alternatif' => 'Putra Mandiri',
         ]);
         Alternatif::create([
             'kode' => 'A8',
-            'nama_alternatif' => 'Bambang',
+            'nama_alternatif' => 'Fadil Andim',
         ]);
         Alternatif::create([
             'kode' => 'A9',
-            'nama_alternatif' => 'Desta',
+            'nama_alternatif' => 'Muh Anwar',
         ]);
         Alternatif::create([
             'kode' => 'A10',
-            'nama_alternatif' => 'Bima',
+            'nama_alternatif' => 'Zaenudin',
         ]);
         Alternatif::create([
             'kode' => 'A11',
-            'nama_alternatif' => 'Dewa',
+            'nama_alternatif' => 'Ratono',
         ]);
         Alternatif::create([
             'kode' => 'A12',
-            'nama_alternatif' => 'Nadin',
+            'nama_alternatif' => 'Mukhtar Handayani',
         ]);
         Alternatif::create([
             'kode' => 'A13',
-            'nama_alternatif' => 'Riska',
+            'nama_alternatif' => 'Egi Kurniawan',
         ]);
         Alternatif::create([
             'kode' => 'A14',
-            'nama_alternatif' => 'Mustika',
+            'nama_alternatif' => 'Aldi Fatah',
         ]);
         Alternatif::create([
             'kode' => 'A15',
-            'nama_alternatif' => 'Dhena',
+            'nama_alternatif' => 'Arif Setiawan ',
         ]);
         Alternatif::create([
             'kode' => 'A16',
-            'nama_alternatif' => 'Satya',
+            'nama_alternatif' => 'Rizki Jijab',
         ]);
         Alternatif::create([
             'kode' => 'A17',
-            'nama_alternatif' => 'Wisnu',
+            'nama_alternatif' => 'Algi Aldiansyah',
         ]);
         Alternatif::create([
             'kode' => 'A18',
-            'nama_alternatif' => 'Dwiary',
+            'nama_alternatif' => 'Muhammad Zuh',
         ]);
         Alternatif::create([
             'kode' => 'A19',
-            'nama_alternatif' => 'Rheina',
+            'nama_alternatif' => 'Alpian',
         ]);
         Alternatif::create([
             'kode' => 'A20',
-            'nama_alternatif' => 'Fanny',
+            'nama_alternatif' => 'Supriyadi',
+        ]);
+        Alternatif::create([
+            'kode' => 'A21',
+            'nama_alternatif' => 'Kusuma Atmajha',
         ]);
 
         // Kriteria 1
         Kriteria::create([
-            'nama_kriteria' => 'Prestasi',
-            'bobot' => 10,
-            'jenis_kriteria' => 'Benefit'
-        ]);
-        Kriteria::create([
-            'nama_kriteria' => 'Kedisiplinan',
-            'bobot' => 15,
-            'jenis_kriteria' => 'Benefit'
-        ]);
-        Kriteria::create([
-            'nama_kriteria' => 'Organisasi',
+            'nama_kriteria' => 'KEHADIRAN',
             'bobot' => 5,
+            'jenis_kriteria' => 'Cost'
+        ]);
+        Kriteria::create([
+            'nama_kriteria' => 'JUMLAH SUGESTION SYSTEM',
+            'bobot' => 4,
             'jenis_kriteria' => 'Benefit'
         ]);
         Kriteria::create([
-            'nama_kriteria' => 'Sikap',
-            'bobot' => 10,
+            'nama_kriteria' => 'SUGESTION SYSTEM GOLD',
+            'bobot' => 4,
+            'jenis_kriteria' => 'Benefit'
+        ]);
+        Kriteria::create([
+            'nama_kriteria' => 'SP',
+            'bobot' => 4,
             'jenis_kriteria' => 'Benefit'
         ]);
 
         Kriteria::create([
-            'nama_kriteria' => 'Public Speaking',
-            'bobot' => 10,
+            'nama_kriteria' => '5R',
+            'bobot' => 4,
             'jenis_kriteria' => 'Benefit'
         ]);
         Kriteria::create([
-            'nama_kriteria' => 'Rajin',
-            'bobot' => 5,
-            'jenis_kriteria' => 'Benefit'
-        ]);
-        Kriteria::create([
-            'nama_kriteria' => 'IPK',
-            'bobot' => 10,
-            'jenis_kriteria' => 'Benefit'
-        ]);
-        Kriteria::create([
-            'nama_kriteria' => 'Karya Tulis',
-            'bobot' => 5,
-            'jenis_kriteria' => 'Benefit'
-        ]);
-        Kriteria::create([
-            'nama_kriteria' => 'Masa Pendidikan',
+            'nama_kriteria' => 'DISIPLIN KERJA',
             'bobot' => 5,
             'jenis_kriteria' => 'Cost'
         ]);
         Kriteria::create([
-            'nama_kriteria' => 'Umur',
-            'bobot' => 25,
-            'jenis_kriteria' => 'Cost'
+            'nama_kriteria' => 'TANGGUNG JAWAB',
+            'bobot' => 4,
+            'jenis_kriteria' => 'Benefit'
+        ]);
+        Kriteria::create([
+            'nama_kriteria' => 'INISIATIF',
+            'bobot' => 4,
+            'jenis_kriteria' => 'Benefit'
+        ]);
+        Kriteria::create([
+            'nama_kriteria' => 'KERJA SAMA',
+            'bobot' => 4,
+            'jenis_kriteria' => 'Benefit'
+        ]);
+        Kriteria::create([
+            'nama_kriteria' => 'KEJUJURAN',
+            'bobot' => 4,
+            'jenis_kriteria' => 'Benefit'
         ]);
 
         // Subkriteria 1
         SubKriteria::create([
             'kriteria_id' => '1',
-            'nama_sub' => 'Kurang',
+            'nama_sub' => '<95',
             'nilai' => 1,
         ]);
         SubKriteria::create([
             'kriteria_id' => '1',
-            'nama_sub' => 'Cukup',
-            'nilai' => 2,
-        ]);
-        SubKriteria::create([
-            'kriteria_id' => '1',
-            'nama_sub' => 'Cukup Baik',
+            'nama_sub' => '95 - 99',
             'nilai' => 3,
         ]);
         SubKriteria::create([
             'kriteria_id' => '1',
-            'nama_sub' => 'Baik',
-            'nilai' => 4,
-        ]);
-
-        SubKriteria::create([
-            'kriteria_id' => '1',
-            'nama_sub' => 'Sangat Baik',
+            'nama_sub' => '100',
             'nilai' => 5,
         ]);
 
         // Subkriteria 2
         SubKriteria::create([
             'kriteria_id' => '2',
-            'nama_sub' => 'Kurang',
+            'nama_sub' => '0',
             'nilai' => 1,
         ]);
         SubKriteria::create([
             'kriteria_id' => '2',
-            'nama_sub' => 'Cukup',
+            'nama_sub' => '<2',
             'nilai' => 2,
         ]);
         SubKriteria::create([
             'kriteria_id' => '2',
-            'nama_sub' => 'Cukup Baik',
-            'nilai' => 3,
-        ]);
-        SubKriteria::create([
-            'kriteria_id' => '2',
-            'nama_sub' => 'Baik',
-            'nilai' => 4,
-        ]);
-
-        SubKriteria::create([
-            'kriteria_id' => '2',
-            'nama_sub' => 'Sangat Baik',
+            'nama_sub' => '>2',
             'nilai' => 5,
         ]);
 
         // Subkriteria 3
         SubKriteria::create([
             'kriteria_id' => '3',
-            'nama_sub' => 'Kurang',
-            'nilai' => 1,
+            'nama_sub' => '0',
+            'nilai' => 0,
         ]);
         SubKriteria::create([
             'kriteria_id' => '3',
-            'nama_sub' => 'Cukup',
-            'nilai' => 2,
-        ]);
-        SubKriteria::create([
-            'kriteria_id' => '3',
-            'nama_sub' => 'Cukup Baik',
-            'nilai' => 3,
-        ]);
-        SubKriteria::create([
-            'kriteria_id' => '3',
-            'nama_sub' => 'Baik',
+            'nama_sub' => '1',
             'nilai' => 4,
         ]);
-
         SubKriteria::create([
             'kriteria_id' => '3',
-            'nama_sub' => 'Sangat Baik',
+            'nama_sub' => '>2',
             'nilai' => 5,
         ]);
 
         // Subkriteria 4
         SubKriteria::create([
             'kriteria_id' => '4',
-            'nama_sub' => 'Kurang',
+            'nama_sub' => 'YA',
             'nilai' => 1,
         ]);
         SubKriteria::create([
             'kriteria_id' => '4',
-            'nama_sub' => 'Cukup',
-            'nilai' => 2,
-        ]);
-        SubKriteria::create([
-            'kriteria_id' => '4',
-            'nama_sub' => 'Cukup Baik',
-            'nilai' => 3,
-        ]);
-        SubKriteria::create([
-            'kriteria_id' => '4',
-            'nama_sub' => 'Baik',
-            'nilai' => 4,
-        ]);
-
-        SubKriteria::create([
-            'kriteria_id' => '4',
-            'nama_sub' => 'Sangat Baik',
+            'nama_sub' => 'TIDAK',
             'nilai' => 5,
         ]);
 
         // Subkriteria 5
         SubKriteria::create([
             'kriteria_id' => '5',
-            'nama_sub' => 'Kurang',
+            'nama_sub' => '< 80',
             'nilai' => 1,
         ]);
         SubKriteria::create([
             'kriteria_id' => '5',
-            'nama_sub' => 'Cukup',
+            'nama_sub' => '80 - 84',
             'nilai' => 2,
         ]);
         SubKriteria::create([
             'kriteria_id' => '5',
-            'nama_sub' => 'Cukup Baik',
+            'nama_sub' => '85 - 89',
             'nilai' => 3,
         ]);
         SubKriteria::create([
             'kriteria_id' => '5',
-            'nama_sub' => 'Baik',
+            'nama_sub' => '90 - 94',
             'nilai' => 4,
         ]);
 
         SubKriteria::create([
             'kriteria_id' => '5',
-            'nama_sub' => 'Sangat Baik',
+            'nama_sub' => '95 - 100',
             'nilai' => 5,
         ]);
 
-       //Subkriteria 6
+        //Subkriteria 6
         SubKriteria::create([
             'kriteria_id' => '6',
-            'nama_sub' => 'Kurang',
+            'nama_sub' => '< 80',
             'nilai' => 1,
         ]);
         SubKriteria::create([
             'kriteria_id' => '6',
-            'nama_sub' => 'Cukup',
+            'nama_sub' => '80 - 84',
             'nilai' => 2,
         ]);
         SubKriteria::create([
             'kriteria_id' => '6',
-            'nama_sub' => 'Cukup Baik',
+            'nama_sub' => '85 - 89',
             'nilai' => 3,
         ]);
         SubKriteria::create([
             'kriteria_id' => '6',
-            'nama_sub' => 'Baik',
+            'nama_sub' => '90 - 94',
             'nilai' => 4,
         ]);
 
         SubKriteria::create([
             'kriteria_id' => '6',
-            'nama_sub' => 'Sangat Baik',
+            'nama_sub' => '95 - 100',
             'nilai' => 5,
-        ]); 
+        ]);
         // Subkriteria 7
         SubKriteria::create([
             'kriteria_id' => '7',
-            'nama_sub' => 'Kurang',
+            'nama_sub' => '< 80',
             'nilai' => 1,
         ]);
         SubKriteria::create([
             'kriteria_id' => '7',
-            'nama_sub' => 'Cukup',
+            'nama_sub' => '80 - 84',
             'nilai' => 2,
         ]);
         SubKriteria::create([
             'kriteria_id' => '7',
-            'nama_sub' => 'Cukup Baik',
+            'nama_sub' => '85 - 89',
             'nilai' => 3,
         ]);
         SubKriteria::create([
             'kriteria_id' => '7',
-            'nama_sub' => 'Baik',
+            'nama_sub' => '90 - 94',
             'nilai' => 4,
         ]);
 
         SubKriteria::create([
             'kriteria_id' => '7',
-            'nama_sub' => 'Sangat Baik',
+            'nama_sub' => '95 - 100',
             'nilai' => 5,
         ]);
-       // Subkriteria 8
+        // Subkriteria 8
         SubKriteria::create([
             'kriteria_id' => '8',
-            'nama_sub' => 'Kurang',
+            'nama_sub' => '< 80',
             'nilai' => 1,
         ]);
         SubKriteria::create([
             'kriteria_id' => '8',
-            'nama_sub' => 'Cukup',
+            'nama_sub' => '80 - 84',
             'nilai' => 2,
         ]);
         SubKriteria::create([
             'kriteria_id' => '8',
-            'nama_sub' => 'Cukup Baik',
+            'nama_sub' => '85 - 89',
             'nilai' => 3,
         ]);
         SubKriteria::create([
             'kriteria_id' => '8',
-            'nama_sub' => 'Baik',
+            'nama_sub' => '90 - 94',
             'nilai' => 4,
         ]);
 
         SubKriteria::create([
             'kriteria_id' => '8',
-            'nama_sub' => 'Sangat Baik',
+            'nama_sub' => '95 - 100',
             'nilai' => 5,
         ]);
         //Subkriteria 9
         SubKriteria::create([
             'kriteria_id' => '9',
-            'nama_sub' => 'Kurang',
+            'nama_sub' => '< 80',
             'nilai' => 1,
         ]);
         SubKriteria::create([
             'kriteria_id' => '9',
-            'nama_sub' => 'Cukup',
+            'nama_sub' => '80 - 84',
             'nilai' => 2,
         ]);
         SubKriteria::create([
             'kriteria_id' => '9',
-            'nama_sub' => 'Cukup Baik',
+            'nama_sub' => '85 - 89',
             'nilai' => 3,
         ]);
         SubKriteria::create([
             'kriteria_id' => '9',
-            'nama_sub' => 'Baik',
+            'nama_sub' => '90 - 94',
             'nilai' => 4,
         ]);
 
         SubKriteria::create([
             'kriteria_id' => '9',
-            'nama_sub' => 'Sangat Baik',
+            'nama_sub' => '95 - 100',
             'nilai' => 5,
         ]);
         //Subkriteria 10
         SubKriteria::create([
             'kriteria_id' => '10',
-            'nama_sub' => 'Kurang',
+            'nama_sub' => '< 80',
             'nilai' => 1,
         ]);
         SubKriteria::create([
             'kriteria_id' => '10',
-            'nama_sub' => 'Cukup',
+            'nama_sub' => '80 - 84',
             'nilai' => 2,
         ]);
         SubKriteria::create([
             'kriteria_id' => '10',
-            'nama_sub' => 'Cukup Baik',
+            'nama_sub' => '85 - 89',
             'nilai' => 3,
         ]);
         SubKriteria::create([
             'kriteria_id' => '10',
-            'nama_sub' => 'Baik',
+            'nama_sub' => '90 - 94',
             'nilai' => 4,
         ]);
 
         SubKriteria::create([
             'kriteria_id' => '10',
-            'nama_sub' => 'Sangat Baik',
+            'nama_sub' => '95 - 100',
             'nilai' => 5,
         ]);
     }
