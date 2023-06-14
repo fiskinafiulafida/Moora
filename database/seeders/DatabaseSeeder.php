@@ -192,7 +192,7 @@ class DatabaseSeeder extends Seeder
         SubKriteria::create([
             'kriteria_id' => '2',
             'nama_sub' => '<2',
-            'nilai' => 2,
+            'nilai' => 3,
         ]);
         SubKriteria::create([
             'kriteria_id' => '2',
@@ -204,12 +204,12 @@ class DatabaseSeeder extends Seeder
         SubKriteria::create([
             'kriteria_id' => '3',
             'nama_sub' => '0',
-            'nilai' => 0,
+            'nilai' => 1,
         ]);
         SubKriteria::create([
             'kriteria_id' => '3',
             'nama_sub' => '1',
-            'nilai' => 4,
+            'nilai' => 3,
         ]);
         SubKriteria::create([
             'kriteria_id' => '3',
